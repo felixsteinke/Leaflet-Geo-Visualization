@@ -1,5 +1,5 @@
 {
-  "name": "project2",
+  "name": "leaflet-prototypes",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,6 +12,7 @@
   "dependencies": {
     "http-server": "^0.12.3",
     "jquery": "^3.5.1",
+    "flotr2": "^0.1.0",
     "leaflet": "^1.7.1",
     "leaflet-iconmaterial": "^1.1.0",
     "leaflet-control-geocoder": "^1.13.0",

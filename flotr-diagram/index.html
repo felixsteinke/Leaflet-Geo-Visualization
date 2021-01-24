@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Flotr Diagrams</title>
+    <script src="../node_modules/flotr2/flotr2.js"></script>
+    <script>
+        window.onload = function () {
+            /*
+            Data from
+            https://gitlab.rz.hft-stuttgart.de/coors/gvi_ws20_21/-/wikis/Informationsvisualisierung/Uebung_1
+            Documentation of flotr2:
+            https://humblesoftware.com/flotr2/documentation
+            */
+
+            const bedarf2012 = [128.52, 187.54, 63.16, 72.18, 0, 0, 0, 0, 6, 68.58, 84.54, 120.51];
+            const bedarf2013 = [144.44, 133.07, 121.78, 63.86, 35.53, 18.57, 0, 0, 16.56, 48.53, 91.86, 111.52];
+            const bedarf2014 = [113.77, 96.17, 77.74, 38.27, 29.79, 11.6, 0, 0, 16.85, 36.14, 67.55, 138];
+            //Major Ticks
+            const monate = ["Januar", "Februar", "März", "April", "Main", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
+            //Minor Ticks
+            const jahre = ["2012", "2013", "2014"];
+
+            /*
+            General Style of the charts (except pie-chart)
+             */
+
+            //Titel
+            const chartTitle = "Wärmebedarf Bau 2";
+            //Farben-Definition
+            let colors = ["#ff0000", "#002aff", "#00fd06"];
+            //Hintergrundlinien-Definition
+            let displayedGrid = {
+                horizontalLines: true,
+                verticalLines: true,
+            }
+            //Maus-Erkennung
+            let mouse = {track: true}
+            //Legende
+            let legend = {
+                position: 'ne',
+                backgroundColor: ''
+            }
+
+            /*
+            Plot of the charts
+            */
+
+            Flotr.draw(
+                document.getElementById("bar-chart"),
+                //Mapping der Daten auf die Balken (4 Balken, 1 leer)
+                [
+                    {data: bedarf2012.map((e, i) => [i * 4, e]), label: "2012"},
+                    {data: bedarf2013.map((e, i) => [i * 4 + 1, e]), label: "2013"},
+                    {data: bedarf2014.map((e, i) => [i * 4 + 2, e]), label: "2014"}
+                ],
+                //Meta-Daten des ganzen Diagramms
+                {
+                    title: chartTitle,
+                    colors: colors,
+                    //Balken Eigenschaften
+                    bars: {
+                        stacked: false,
+                        show: true,
+                        barWidth: 0.5,
+                        shadowSize: 0.1,
+                        fillOpacity: 1,
+                        lineWidth: 0,
+                        HtmlText: true,
+                    },
+                    //X-Achse
+                    xaxis: {
+                        labelsAngle: 60,            // => labels' angle, in degrees
+                        ticks: monate.map((e, i) => [i * 4 + 1, e]), // => format: either [1, 3] or [[1, 'a'], 3]
+                        showLabels: true,           // => setting to true will show the axis ticks labels, hide otherwise
+                        showMinorLabels: true,      // => true to show the axis minor ticks labels, false to hide
+                        title: "Monate",            // => axis title
+                        titleAngle: 90,             // => axis title's angle, in degrees
+                        noTicks: 46,                // => number of ticks for automagically generated ticks
+                        mode: 'normal',             // => can be 'time' or 'normal'
+                        titleAlign: 'center',
+                    },
+                    //Y-Achse
+                    yaxis: {
+                        title: "Bedarf",           // => axis title
+                        titleAngle: 90,             // => axis title's angle, in degrees
+                        noTicks: 5,                 // => number of ticks for automagically generated ticks
+                        tickDecimals: 0,            // => no. of decimals, null means auto
+                        titleAlign: 'center',
+                    },
+                    grid: displayedGrid,
+                    mouse: mouse,
+                    legend: legend,
+                }
+            );
+
+            Flotr.draw(
+                document.getElementById("line-chart"),
+                [
+                    {data: bedarf2012.map((e, i) => [i, e]), label: "2012"},
+                    {data: bedarf2013.map((e, i) => [i, e]), label: "2013"},
+                    {data: bedarf2014.map((e, i) => [i, e]), label: "2014"}
+                ],
+                {
+                    title: chartTitle,
+                    colors: colors,
+                    xaxis: {
+                        labelsAngle: 60,
+                        ticks: monate.map((e, i) => [i, e]),
+                        showLabels: true,
+                        showMinorLabels: true,
+                        title: "Monate",
+                        titleAngle: 90,
+                        noTicks: 46,
+                        tickDecimals: null,
+                        mode: 'normal',
+                        titleAlign: 'center',
+                    },
+                    yaxis: {
+                        title: "Bedarf",
+                        titleAngle: 90,
+                        noTicks: 5,
+                        tickDecimals: 0,
+                        titleAlign: 'center',
+                    },
+                    grid: displayedGrid,
+                    mouse: mouse,
+                    legend: legend,
+                }
+            );
+
+            Flotr.draw(
+                document.getElementById("scatter-chart"),
+                [
+                    {data: bedarf2012.map((e, i) => [i, e]), label: "2012", points: {show: true}},
+                    {data: bedarf2013.map((e, i) => [i, e]), label: "2013", points: {show: true}},
+                    {data: bedarf2014.map((e, i) => [i, e]), label: "2014", points: {show: true}}
+                ],
+                {
+                    title: chartTitle,
+                    colors: colors,
+                    xaxis: {
+                        labelsAngle: 60,
+                        ticks: monate.map((e, i) => [i, e]),
+                        showLabels: true,
+                        title: "Monate",
+                        titleAngle: 90,
+                        noTicks: 46,
+                        mode: 'normal',
+                        titleAlign: 'center',
+                    },
+                    yaxis: {
+                        title: "Bedarf",
+                        titleAngle: 90,
+                        noTicks: 5,
+                        tickDecimals: 0,
+                        titleAlign: 'center',
+                    },
+                    grid: displayedGrid,
+                    mouse: mouse,
+                    legend: legend,
+                }
+            );
+
+            Flotr.draw(
+                document.getElementById("bubble-chart"),
+                [
+                    bedarf2012.map((e, i) => [i, 0, e / 25]),
+                    bedarf2013.map((e, i) => [i, 1, e / 25]),
+                    bedarf2014.map((e, i) => [i, 2, e / 25])
+                ],
+                //.filter(d => d.data[0][1] > 0),
+                {
+                    title: chartTitle,
+                    colors: colors,
+                    bubbles: {
+                        show: true,
+                        baseRadius: 5
+                    },
+                    xaxis: {
+                        min: -1,
+                        max: 12,
+                        ticks: monate.map((e, i) => [i, e]),
+                        showLabels: true,
+                        margin: true
+                    },
+                    yaxis: {
+                        min: -1,
+                        max: 3,
+                        ticks: jahre.map((e, i) => [i, e]),
+                        showLabels: true,
+                    },
+                    grid: displayedGrid,
+                    mouse: mouse,
+                    legend: legend,
+                }
+            );
+
+            Flotr.draw(
+                document.getElementById("pie-chart"),
+                bedarf2012.map((e, i) => {
+                    return {
+                        data: [[0, e]],
+                        label: monate[i]
+                    }
+                }),
+                //.filter(d => d.data[0][1] > 0),
+                {
+                    title: "Wärmebedarf 2012",
+                    pie: {
+                        show: true
+                    },
+                    grid: {
+                        horizontalLines: false,
+                        verticalLines: false,
+                    },
+                    mouse: mouse,
+                    legend: legend,
+                }
+            );
+        };
+    </script>
+    <style>
+        .chart {
+            height: 400px;
+            width: 800px;
+            display: inline-block;
+            margin: 30px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="chart" id="bar-chart"></div>
+<div class="chart" id="line-chart"></div>
+<div class="chart" id="scatter-chart"></div>
+<div class="chart" id="bubble-chart"></div>
+<div class="chart" id="pie-chart"></div>
+</body>
+</html>

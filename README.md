@@ -10,11 +10,16 @@ __Additional member of the original projects:__
 
 __System Requirements:__
 
-* `NodeJS` und `NPM`: https://nodejs.org/en/download/
+* `NodeJS` and `NPM`: https://nodejs.org/en/download/
 * `Python`: https://www.python.org/downloads/release/python-390/
-  * Umgebungsvariablen: https://praxistipps.chip.de/python-in-cmd-nutzen-so-gehts_96172
-  * Execution Aliases: https://www.windowscentral.com/how-manage-app-execution-aliases-windows-10
+  * environment variables: https://praxistipps.chip.de/python-in-cmd-nutzen-so-gehts_96172
+  * execution aliases: https://www.windowscentral.com/how-manage-app-execution-aliases-windows-10
 * `PIP`: https://pip.pypa.io/en/stable/installing/
+
+## Flotr Diagram
+
+Project to display data in different diagrams. Project is extended with a
+german [documentation](./diagram-documentation-ger.pdf).
 
 ## Leaflet Marker
 

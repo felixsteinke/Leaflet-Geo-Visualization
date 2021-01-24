@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bevölkerung in Europa</title>
+    <meta content="initial-scale=1.0, user-scalable=no" name="viewport"/>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/leaflet/dist/leaflet.js"></script>
+    <script src="../node_modules/@turf/turf/turf.min.js"></script>
+    <script src="./assets/index.js"></script>
+    <link href="../node_modules/leaflet/dist/leaflet.css" rel="stylesheet"/>
+    <link href="./assets/index.css" rel="stylesheet">
+</head>
+
+<body onload="initialize()">
+<div id="buttons">
+    <button id="btnDisplayedData" onclick="changeDisplacedData()" type="button">Change to total Population View</button>
+    <button id="btnColorScheme" onclick="changeColorScheme()" type="button">Change to Gradient Color</button>
+</div>
+<div id="map_canvas"></div>
+<div id="legend">
+    <h3 id="legendTitle"></h3>
+    <p id="maxScale"></p>
+    <img alt="colorScheme" id="colorImg" src="">
+    <p id="minScale"></p>
+</div>
+</body>
+</html>

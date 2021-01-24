@@ -1,0 +1,137 @@
+[
+  {
+    "name": "Lernen",
+    "icon": "book",
+    "items": [
+      {
+        "name": "Uni Bibliothek",
+        "location": [
+          48.781937,
+          9.171634
+        ]
+      },
+      {
+        "name": "HFT Bibliothek",
+        "location": [
+          48.779880,
+          9.173220
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Essen & Trinken",
+    "icon": "fastfood",
+    "items": [
+      {
+        "name": "Mensa",
+        "location": [
+          48.780978,
+          9.169663
+        ]
+      },
+      {
+        "name": "Block 4",
+        "location": [
+          48.780469,
+          9.172523
+        ]
+      },
+      {
+        "name": "Palast der Republik",
+        "location": [
+          48.780495,
+          9.177329
+        ]
+      },
+      {
+        "name": "Fritty Bar",
+        "location": [
+          48.773466,
+          9.175387
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Öffentlicher Nahverkehr",
+    "icon": "directions_subway",
+    "items": [
+      {
+        "name": "Hauptbahnhof",
+        "location": [
+          48.783600,
+          9.181083
+        ]
+      },
+      {
+        "name": "U-Bahn Haltestelle Börsenplatz",
+        "location": [
+          48.780127,
+          9.176442
+        ]
+      },
+      {
+        "name": "U-Bahn Haltestelle Liederhalle",
+        "location": [
+          48.778501,
+          9.167426
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Parks",
+    "icon": "nature_people",
+    "items": [
+      {
+        "name": "Schlossplatz",
+        "location": [
+          48.778565,
+          9.179865
+        ]
+      },
+      {
+        "name": "Oberer Schlossgarten",
+        "location": [
+          48.780264,
+          9.182995
+        ]
+      },
+      {
+        "name": "Stadtgarten",
+        "location": [
+          48.781054,
+          9.173814
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Einkaufen",
+    "icon": "local_grocery_store",
+    "items": [
+      {
+        "name": "Rewe Boschareal",
+        "location": [
+          48.779633,
+          9.167330
+        ]
+      },
+      {
+        "name": "Lidl Boschareal",
+        "location": [
+          48.779717,
+          9.167631
+        ]
+      },
+      {
+        "name": "Teegut Königsbau",
+        "location": [
+          48.779654,
+          9.178082
+        ]
+      }
+    ]
+  }
+]

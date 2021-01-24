@@ -23,7 +23,7 @@ Additional another file is provided with an extended german [documentation](./ch
 
 __German description:__
 
-Bei Aufgabe 1 haben wir die Implementierung als Online-Karte gewählt. Wir bezogen die Daten
+Bei dieser Aufgabe haben wir die Implementierung als Online-Karte gewählt. Wir bezogen die Daten
 der `aufgabe1_resources/europe.geo.json` von https://geojson-maps.ash.ms/ .
 
 Um diese als Choroplethenkarte darzustellen haben wir mit den Layers gearbeitet und die ausgewählten Länder
@@ -53,7 +53,6 @@ __German description:__
 
 In dieser Aufgabe wurden folgende Points of Interests dargestellt:
 
-Source: `aufgabe2_resources/pois.json`
 
 | Lernen         | Essen & Trinken     | Öffentlicher Nahverkehr        | Parks                | Einkaufen        |
 |----------------|---------------------|--------------------------------|----------------------|------------------|

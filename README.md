@@ -11,10 +11,6 @@ __Additional member of the original projects:__
 __System Requirements:__
 
 * `NodeJS` and `NPM`: https://nodejs.org/en/download/
-* `Python`: https://www.python.org/downloads/release/python-390/
-  * environment variables: https://praxistipps.chip.de/python-in-cmd-nutzen-so-gehts_96172
-  * execution aliases: https://www.windowscentral.com/how-manage-app-execution-aliases-windows-10
-* `PIP`: https://pip.pypa.io/en/stable/installing/
 
 ## Choropleth Map
 

@@ -1,5 +1,8 @@
 # Tasks for Geo-Visualization
 
+These projects are objects to practice the usage of visualization. The most things are written with HTML, JavaScript and
+CSS. The most used library is [Leaflet](https://leafletjs.com/).
+
 __Additional member of the original projects:__
 
 * [Florian Grabowski](https://github.com/FlorianGrabowski)
@@ -12,3 +15,7 @@ __System Requirements:__
   * Umgebungsvariablen: https://praxistipps.chip.de/python-in-cmd-nutzen-so-gehts_96172
   * Execution Aliases: https://www.windowscentral.com/how-manage-app-execution-aliases-windows-10
 * `PIP`: https://pip.pypa.io/en/stable/installing/
+
+## Leaflet Marker
+
+Project with some `Marker` sorted into `Layer Groups`.

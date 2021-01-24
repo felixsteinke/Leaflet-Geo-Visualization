@@ -1,0 +1,21 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -a localhost -p 8080"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.12.3",
+    "jquery": "^3.5.1",
+    "leaflet": "^1.7.1",
+    "leaflet-iconmaterial": "^1.1.0",
+    "leaflet-control-geocoder": "^1.13.0",
+    "leaflet.markercluster": "^1.4.1",
+    "@turf/turf": "^5.1.6"
+  }
+}

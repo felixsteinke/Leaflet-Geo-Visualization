@@ -1,5 +1,5 @@
 //data from: https://geojson-maps.ash.ms/
-const geoJsonPath = '../resources/europe.geo.json';
+const geoJsonPath = './resources/europe.geo.json';
 
 let map;
 let openStreetMapLayer;
@@ -132,18 +132,18 @@ function loadLegend() {
         if (!useClassColors) {
             maxScale = 'Maximum: ' + parseInt(populationEdges.maxPopulationDensity);
             minScale = 'Minimum: ' + parseInt(populationEdges.minPopulationDensity);
-            colorImage = "../resources/gradientScale.png";
+            colorImage = "./resources/gradientScale.png";
         } else {
-            colorImage = "../resources/classScaleDensity.png";
+            colorImage = "./resources/classScaleDensity.png";
         }
     } else {
         legendTitle = 'Total Population';
         if (!useClassColors) {
             maxScale = 'Maximum: ' + parseInt(populationEdges.maxPopulation);
             minScale = 'Minimum: ' + parseInt(populationEdges.minPopulation);
-            colorImage = "../resources/gradientScale.png";
+            colorImage = "./resources/gradientScale.png";
         } else {
-            colorImage = "../resources/classScaleTotalPopulation.png";
+            colorImage = "./resources/classScaleTotalPopulation.png";
         }
     }
     document.getElementById("legendTitle").innerText = legendTitle;

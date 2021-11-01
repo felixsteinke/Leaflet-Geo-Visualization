@@ -2,15 +2,14 @@
   "name": "leaflet-prototypes",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server -a localhost -p 8080"
+    "start": "echo \"Error: run index.html in nginx\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "http-server": "^0.12.3",
     "jquery": "^3.5.1",
     "flotr2": "^0.1.0",
     "leaflet": "^1.7.1",

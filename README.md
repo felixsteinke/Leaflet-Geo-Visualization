@@ -8,9 +8,15 @@ __Additional member of the original projects:__
 * [Florian Grabowski](https://github.com/FlorianGrabowski)
 * [Christoph Walcher](https://github.com/wiomoc)
 
-__System Requirements:__
+__Development Requirements:__
 
 * `NodeJS` and `NPM`: https://nodejs.org/en/download/
+
+__Docker Container:__
+
+Build: `docker build -t visualization . `
+
+Run: `docker run -d -p 8080:80 visualization`
 
 ## Choropleth Map
 
